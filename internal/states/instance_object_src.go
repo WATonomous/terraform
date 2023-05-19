@@ -59,6 +59,7 @@ type ResourceInstanceObjectSrc struct {
 	Status              ObjectStatus
 	Dependencies        []addrs.ConfigResource
 	CreateBeforeDestroy bool
+	PreventRemoval      bool
 }
 
 // Decode unmarshals the raw representation of the object attributes. Pass the
@@ -97,6 +98,7 @@ func (os *ResourceInstanceObjectSrc) Decode(ty cty.Type) (*ResourceInstanceObjec
 		Dependencies:        os.Dependencies,
 		Private:             os.Private,
 		CreateBeforeDestroy: os.CreateBeforeDestroy,
+		PreventRemoval:      os.PreventRemoval,
 	}, nil
 }
 
