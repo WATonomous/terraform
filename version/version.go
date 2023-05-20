@@ -45,7 +45,7 @@ func init() {
 	if dev == "no" {
 		Prerelease = semVerFull.Prerelease()
 	} else {
-		Prerelease = "dev"
+		Prerelease = "wato-dev"
 	}
 }
 
